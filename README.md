@@ -1,374 +1,234 @@
-##Hospital Management & Healthcare Analytics
+# 🏥 Hospital Management & Healthcare Analytics
 
-Project Overview
+A MySQL-based database and data analysis project that manages and analyzes hospital information including patients, doctors, departments, appointments, admissions, medicines, prescriptions, billing, and staff. The project demonstrates how SQL can be used to organize relational data and generate meaningful healthcare insights.
 
-The Hospital Management & Healthcare Analytics project is a
-MySQL-based relational database project designed to organize and analyze
-hospital data. It covers patients, doctors, departments, appointments,
-admissions, medicines, prescriptions, billing, and staff.
+## 🎯 Project Objective
 
-The project demonstrates practical SQL skills through database design,
-data management, analytical queries, joins, aggregate functions, date
-calculations, and SQL views.
+The main objective of this project is to build a structured hospital management database and analyze hospital data using MySQL.
 
-Objectives
+The project focuses on understanding patient activity, doctor and department information, appointments, admissions, medicines, prescriptions, billing, and staff-related information through SQL queries.
 
-Build a structured relational hospital database.
+The project is designed as part of my learning journey in SQL and Data Analytics.
 
-Store hospital information across multiple related tables.
+## 🗄️ Database Structure
 
-Analyze healthcare operations using SQL.
+The database contains 9 related tables:
 
-Generate useful summaries from hospital records.
+1. **Patients** – Stores patient personal and registration information.
+2. **Department** – Stores hospital department names and locations.
+3. **Doctors** – Stores doctor details, specialization, hiring date, and department.
+4. **Appointments** – Stores patient appointments, dates, times, status, and reasons.
+5. **Admission** – Stores patient admission, discharge, admission type, and room information.
+6. **Medicines** – Stores medicine names, categories, prices, stock, and suppliers.
+7. **Prescriptions** – Stores patient, doctor, medicine, dosage, and treatment duration.
+8. **Bills** – Stores patient billing information, payment status, and payment method.
+9. **Staff** – Stores staff roles, departments, hiring dates, and salaries.
 
-Create reusable SQL views for reporting and analysis.
+## 📊 Data Analysis
 
-Technologies Used
+The project performs analysis across different areas of hospital management.
 
-MySQL
+### 👨‍⚕️ Hospital Overview
 
-SQL
+The project analyzes:
 
-Relational Database Design
+- Total Patients
+- Total Doctors
+- Total Departments
+- Total Staff
+- Total Appointments
+- Total Admissions
+- Total Prescriptions
+- Total Medicines
+- Total Hospital Billing
 
-SQL Joins
+### 🧑‍🤝‍🧑 Patient Analysis
 
-Aggregate Functions
+Patient data is analyzed to understand:
 
-SQL Views
+- Patients by Gender
+- Patients by City
+- City-wise Patient Distribution
+- Earliest Registration Date
+- Latest Registration Date
 
-Database Structure
+### 👨‍⚕️ Doctor & Department Analysis
 
-Database name:
+Doctor and department information is analyzed to understand:
 
-hospital_management
+- Doctors by Department
+- Doctors by Specialization
+- Average Doctors per Department
+- Doctors Hired Before/After 2020
+- Earliest Doctor Hiring Date
+- Latest Doctor Hiring Date
+- Doctor and Department Details
+
+### 📅 Appointment Analysis
 
-The project contains 9 tables:
+Appointment data is analyzed to identify:
 
-Table                               Description
-
-patients                          Stores patient personal and
-registration information.
-
-department                        Stores hospital departments and
-locations.
-
-doctors                           Stores doctor details,
-specialization and department
-assignment.
-
-appointments                      Stores appointment date, time,
-status and reason.
-
-admission                         Stores admission, discharge and
-room information.
-
-medicines                         Stores medicine category, price,
-stock and supplier details.
-
-prescriptions                     Stores patient, doctor, medicine,
-dosage and treatment duration.
-
-bills                             Stores billing amount, payment
-status and payment method.
-
-Data
-
-Sample data was inserted into all 9 tables.
-
-50 patient records
-
-50 department records
-
-50 doctor records
-
-50 appointment records
-
-50 admission records
-
-50 medicine records
-
-50 prescription records
-
-50 billing records
-
-50 staff records
-
-Analysis Performed
-
-1. Hospital Overview
-
-Total patients
-
-Total doctors
-
-Total departments
-
-Total staff
-
-Total appointments
-
-Total admissions
-
-Total prescriptions
-
-Total medicines
-
-Total billing amount
-
-2. Patient Analysis
-
-Patient count by gender
-
-Patient count by city
-
-City-wise patient distribution
-
-Earliest registration date
-
-Latest registration date
-
-3. Doctor & Department Analysis
-
-Doctors by department
-
-Doctors by specialization
-
-Average doctors per department
-
-Doctor hiring analysis
-
-Earliest and latest hiring dates
-
-Doctor and department details
-
-4. Appointment Analysis
-
-Completed appointments
-
-Cancelled appointments
-
-No-show appointments
-
-Appointment status distribution
-
-Appointments by doctor
-
-Appointments by patient
-
-Appointment date analysis
-
-5. Admission Analysis
-
-Total admissions
-
-Emergency and elective admissions
-
-Admissions by type
-
-Earliest and latest admission dates
-
-Average length of stay
-
-Longest patient stay
-
-Admissions by doctor
-
-Admissions by room
-
-6. Medicine Analysis
-
-Total medicines
-
-Total stock quantity
-
-Average medicine price
-
-Most and least expensive medicines
-
-Medicines by category
-
-Category-wise medicine distribution
-
-Stock analysis
-
-Medicines by supplier
-
-7. Prescription Analysis
-
-Total prescriptions
-
-Prescriptions by medicine
-
-Most and least prescribed medicines
-
-Prescriptions by doctor
-
-Prescriptions by patient
-
-Average prescription duration
-
-Longest and shortest duration
-
-8. Billing Analysis
-
-Total hospital revenue
-
-Average bill amount
-
-Highest and lowest bills
-
-Paid and pending bills
-
-Bills by payment status
-
-Payments by method
-
-Revenue by payment method
-
-Patient with the highest total billing
-
-9. Staff Analysis
-
-Total staff
-
-Staff by department
-
-Staff by role
-
-Highest and lowest staff count by department
-
-Average staff salary
-
-Highest and lowest salary
-
-Staff hiring analysis
-
-SQL Concepts Used
-
-The project uses the following SQL concepts:
-
-SELECT
-
-WHERE
-
-GROUP BY
-
-ORDER BY
-
-LIMIT
-
-COUNT()
-
-SUM()
-
-AVG()
-
-MIN()
-
-MAX()
-
-JOIN
-
-DATEDIFF()
-
-CREATE VIEW
-
-SQL Views
-
-The project contains the following reusable views:
-
-View                                Purpose
-
-patient_overview                  Provides patient and registration
-details.
-
-doctor_department                 Combines doctor and department
-information.
-
-appointments_summary              Provides appointment information.
-
-admission_summary                 Provides admission information.
-
-medicine_inventory                Provides medicine inventory
-information.
-
-prescription_details              Combines prescription, patient,
-doctor and medicine details.
-
-billing_summary                   Combines billing records with
-patient information.
-
-Example Queries
-
-Total Hospital Revenue
-
-SELECT SUM(total_amount) AS total_revenue
-FROM bills;
-
-Patient Count by City
-
-SELECT city, COUNT(*) AS total_patients
-FROM patients
-GROUP BY city;
-
-Average Admission Stay
-
-SELECT AVG(DATEDIFF(discharge_date, admission_date)) AS average_stay
-FROM admission;
-
-Doctor and Department Details
-
-SELECT
-    d.doctor_name,
-    d.specialization,
-    dp.department_name
-FROM doctors AS d
-JOIN department AS dp
-    ON d.department_id = dp.department_id;
-
-Project Workflow
-
-Created the hospital_management database.
-
-Created 9 relational tables.
-
-Defined primary and foreign keys.
-
-Inserted sample hospital data.
-
-Performed SQL-based data analysis.
-
-Created reusable SQL views.
-
-Documented the database structure and analysis.
-
-Project Outcome
-
-This project demonstrates the practical use of MySQL for relational
-database management and healthcare data analysis. It shows how
-structured hospital records can be connected and analyzed using SQL to
-produce meaningful operational, medical, staffing, inventory, and
-financial information.
-
-Skills Demonstrated
-
-MySQL Database Management
-
-Relational Database Design
-
-SQL Data Analysis
-
-Primary and Foreign Keys
-
-Multi-table Joins
-
-Aggregate Functions
-
-Grouping and Filtering
-
-Date-based Analysis
-
-SQL Views
-
-Healthcare Data Analysis
+- Completed Appointments
+- Cancelled Appointments
+- No-Show Appointments
+- Appointment Status Distribution
+- Appointments by Doctor
+- Appointments by Patient
+- Appointments by Date
+- Earliest Appointment Date
+- Latest Appointment Date
+
+### 🏥 Admission Analysis
+
+Admission records are analyzed to understand:
+
+- Total Admissions
+- Emergency Admissions
+- Elective Admissions
+- Admissions by Type
+- Earliest Admission Date
+- Latest Admission Date
+- Average Length of Stay
+- Longest Patient Stay
+- Admissions by Doctor
+- Admissions by Room
+
+### 💊 Medicine Analysis
+
+Medicine inventory is analyzed to identify:
+
+- Total Medicines
+- Total Stock Quantity
+- Average Medicine Price
+- Most Expensive Medicine
+- Cheapest Medicine
+- Medicines by Category
+- Category-wise Medicine Distribution
+- Highest and Lowest Stock
+- Medicines by Supplier
+
+### 💊 Prescription Analysis
+
+Prescription records are analyzed to understand:
+
+- Total Prescriptions
+- Prescriptions by Medicine
+- Most Prescribed Medicine
+- Least Prescribed Medicine
+- Prescriptions by Doctor
+- Prescriptions by Patient
+- Average Prescription Duration
+- Longest and Shortest Prescription Duration
+
+### 💰 Billing Analysis
+
+Billing information is analyzed to identify:
+
+- Total Hospital Revenue
+- Average Bill Amount
+- Highest Bill
+- Lowest Bill
+- Paid Bills
+- Pending Bills
+- Bills by Payment Status
+- Payments by Method
+- Revenue by Payment Method
+- Patient with the Highest Total Billing
+
+### 👥 Staff Analysis
+
+Staff information is analyzed to understand:
+
+- Total Staff
+- Staff by Department
+- Staff by Role
+- Department with Highest Staff
+- Department with Lowest Staff
+- Average Staff Salary
+- Highest Staff Salary
+- Lowest Staff Salary
+- Staff Hired Before/After 2020
+
+## 👁️ SQL Views
+
+The project also includes SQL Views for easier access to frequently used information:
+
+- `patient_overview`
+- `doctor_department`
+- `appointments_summary`
+- `admission_summary`
+- `medicine_inventory`
+- `prescription_details`
+- `billing_summary`
+- `staff_details`
+
+These views combine and organize related information from different tables for easier analysis and reporting.
+
+## 🛠️ SQL Skills Used
+
+- CREATE DATABASE
+- CREATE TABLE
+- INSERT INTO
+- SELECT
+- WHERE
+- GROUP BY
+- ORDER BY
+- LIMIT
+- COUNT()
+- SUM()
+- AVG()
+- MIN()
+- MAX()
+- JOIN
+- DATEDIFF()
+- CREATE VIEW
+- Primary Keys
+- Foreign Keys
+- Relational Database Design
+- Data Analysis
+
+## 🔗 Table Relationships
+
+The project uses foreign keys to connect related hospital information.
+
+Examples include:
+
+- Doctors → Departments
+- Appointments → Patients
+- Appointments → Doctors
+- Admissions → Patients
+- Admissions → Doctors
+- Prescriptions → Patients
+- Prescriptions → Doctors
+- Prescriptions → Medicines
+- Bills → Patients
+- Staff → Departments
+
+These relationships allow information from multiple tables to be combined and analyzed using SQL JOIN operations.
+
+## 💡 Project Insights
+
+The analysis helps understand different aspects of hospital operations, including patient distribution, doctor and department information, appointment activity, admission patterns, medicine inventory, prescription usage, staff information, and hospital billing.
+
+The project demonstrates how relational hospital data can be transformed into meaningful information using SQL.
+
+## 📁 Project Structure
+
+The project contains:
+
+1. **Database Creation** – Creation of the `hospital_management` database.
+2. **Table Creation** – Creation of 9 relational tables.
+3. **Data Insertion** – Sample hospital data inserted into all tables.
+4. **Data Analysis** – SQL queries for hospital-related analysis.
+5. **SQL Views** – Reusable views for important hospital information.
+6. **Documentation** – Project documentation explaining the database and analysis.
+
+## 🧰 Tool Used
+
+**MySQL**
+
+## 🚀 Learning Outcome
+
+This project helped me practice relational database design, SQL queries, aggregate functions, filtering, grouping, joins, date calculations, foreign key relationships, and SQL views by applying them to a realistic hospital management dataset.
+
+It represents one of my practical projects while learning **SQL and Data Analytics**.
